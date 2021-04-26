@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E91E63"
+    tools:context=".SecondActivity">
+
+    <Button
+        android:id="@+id/second_button_createalarm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Criar alarme"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879" />
+
+    <SeekBar
+        android:id="@+id/second_seekbar_hour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="32dp"
+        android:max="23"
+        app:layout_constraintBottom_toTopOf="@+id/second_button_createalarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/second_seekbar_minutes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="80dp"
+        android:max="59"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@+id/second_button_createalarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_seekbar_hour"
+        app:layout_constraintVertical_bias="0.522" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Hora"
+        android:textColor="#f8f8f8"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/second_seekbar_hour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Minutos"
+        android:textColor="#f8f8f8"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/second_seekbar_minutes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/second_textview_minutes"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:text="0"
+        android:textColor="#f8f8f8"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/second_seekbar_minutes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/second_seekbar_minutes"
+        app:layout_constraintTop_toTopOf="@+id/second_seekbar_minutes" />
+
+    <TextView
+        android:id="@+id/second_textview_hour"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:text="0"
+        android:textColor="#f8f8f8"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/second_seekbar_hour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/second_seekbar_hour"
+        app:layout_constraintTop_toTopOf="@+id/second_seekbar_hour" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
